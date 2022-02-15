@@ -60,8 +60,13 @@ $base-division: 12;
     flex-wrap: nowrap !important;
   }
   .dense {
-    padding: 0.2rem !important;
     @include dense;
+  }
+  &.no-gutters {
+    @include no-gutter;
+  }
+  &.no-padding {
+    @include no-padding;
   }
   @while $column-count <= 12 {
     .col-#{$column-count} {
@@ -91,7 +96,51 @@ $base-division: 12;
     flex-wrap: nowrap !important;
   }
   .dense {
-    padding: 0.2rem !important;
     @include dense;
+  }
+  &.no-gutters {
+    @include no-gutter;
+  }
+  &.no-padding {
+    @include no-padding;
+  }
+}
+
+$flex-justify: (
+  flex-start,
+  flex-end,
+  start,
+  end,
+  left,
+  right,
+  center,
+  space-between,
+  space-around,
+  space-evenly
+);
+.justify {
+  @each $justification in $flex-justify {
+    &-#{$justification} {
+      justify-content: #{$justification};
+    }
+  }
+}
+
+$flex-align: (
+  stretch,
+  flex-start,
+  flex-end,
+  center,
+  baseline,
+  start,
+  end,
+  self-start,
+  self-end
+);
+.align {
+  @each $flex-align in $flex-align {
+    &-#{$flex-align} {
+      align-items: #{$flex-align};
+    }
   }
 }

@@ -1,0 +1,40 @@
+$multiplier: 1;
+$base-spacing: 2;
+$maximum-iterations: 12;
+$current-iteration: 1;
+
+@while $current-iteration <= $maximum-iterations {
+  .p-#{$multiplier} {
+    padding: #{$base-spacing * $multiplier}px !important;
+  }
+  .m-#{$multiplier} {
+    margin: #{$base-spacing * $multiplier}px !important;
+  }
+  .pl-#{$multiplier} {
+    padding-left: #{$base-spacing * $multiplier}px !important;
+  }
+  .ml-#{$multiplier} {
+    margin-left: #{$base-spacing * $multiplier}px !important;
+  }
+  .pr-#{$multiplier} {
+    padding-right: #{$base-spacing * $multiplier}px !important;
+  }
+  .mr-#{$multiplier} {
+    margin-right: #{$base-spacing * $multiplier}px !important;
+  }
+  .pt-#{$multiplier} {
+    padding-top: #{$base-spacing * $multiplier}px !important;
+  }
+  .mt-#{$multiplier} {
+    margin-top: #{$base-spacing * $multiplier}px !important;
+  }
+  .pb-#{$multiplier} {
+    padding-bottom: #{$base-spacing * $multiplier}px !important;
+  }
+  .mb-#{$multiplier} {
+    margin-bottom: #{$base-spacing * $multiplier}px !important;
+  }
+  // Increment the counter
+  $multiplier: $multiplier + 1;
+  $current-iteration: $current-iteration + 1;
+}
