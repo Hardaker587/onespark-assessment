@@ -26,6 +26,9 @@ $current-iteration: 0;
       #{$base-spacing *
       $multiplier}px !important;
   }
+  .mx-auto {
+    margin: 0 auto;
+  }
   .py-#{$multiplier} {
     padding: #{$base-spacing *
       $multiplier}px

@@ -1,6 +1,11 @@
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/router";
+import { beneficiaryStore, add } from "../../store/beneficiaries.store";
+import { uuid } from "../../utilities/uuid";
 
 export default function PolicyAddBeneficiary() {
+  const router = useRouter();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,11 +28,35 @@ export default function PolicyAddBeneficiary() {
     setRelationship(eventValue.value);
   }
 
+  function handleSubmit() {
+    beneficiaryStore.dispatch(
+      add({
+        id: uuid(),
+        firstName,
+        lastName,
+        email,
+        relationship,
+      })
+    );
+  }
+
+  function handleNavigate() {
+    router.push("/policy");
+  }
+
   return (
     <>
       <div className="row">
         <div className="col-12">
-          <h1 className={"m-6"}>Adding a beneficiary</h1>
+          <h1 className={"m-6"}>
+            <button
+              className={"bg-blue p-4 text-white rounded-sm"}
+              onClick={() => handleNavigate()}
+            >
+              Back
+            </button>{" "}
+            Adding a beneficiary
+          </h1>
           <p className={"mx-6 text-grey"}>
             In order to add beneficiaries to your{" "}
             <strong>Life Insurance</strong> policy, we need a few basic details
@@ -83,7 +112,11 @@ export default function PolicyAddBeneficiary() {
           </div>
         </div>
         <div className="form-group row justify-flex-end my-0 mx-6 py-0 px-6">
-          <button className={"bg-blue p-4 text-white rounded-sm"} type="submit">
+          <button
+            className={"bg-blue p-4 text-white rounded-sm"}
+            type="submit"
+            onClick={() => handleSubmit()}
+          >
             Submit Beneficiary
           </button>
         </div>

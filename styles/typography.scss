@@ -33,3 +33,13 @@ $weights: (
     }
   }
 }
+
+$text-orientation: (left, right, center, justify);
+
+.text-align {
+  @each $orientation in $text-orientation {
+    &-#{$orientation} {
+      text-align: #{$orientation};
+    }
+  }
+}

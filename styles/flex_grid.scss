@@ -56,10 +56,10 @@ $base-division: 12;
     flex-wrap: wrap;
     @include std;
   }
-  .no-wrap {
+  &.no-wrap {
     flex-wrap: nowrap !important;
   }
-  .dense {
+  &.dense {
     @include dense;
   }
   &.no-gutters {
@@ -70,6 +70,8 @@ $base-division: 12;
   }
   @while $column-count <= 12 {
     .col-#{$column-count} {
+      display: flex;
+      flex-direction: column;
       flex-basis: get-col-percent($column-count);
       width: get-col-percent($column-count);
       padding: 0.5rem;
@@ -92,10 +94,10 @@ $base-division: 12;
     flex-wrap: wrap;
     @include std;
   }
-  .no-wrap {
+  &.no-wrap {
     flex-wrap: nowrap !important;
   }
-  .dense {
+  &.dense {
     @include dense;
   }
   &.no-gutters {
