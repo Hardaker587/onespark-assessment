@@ -3,6 +3,10 @@
 @import "typography";
 @import "sizing";
 @import "spacing";
+@import "borders";
+@import "inputs";
+@import "buttons";
+// overrides
 html,
 body {
   padding: 0;
@@ -22,4 +26,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  border: none;
 }

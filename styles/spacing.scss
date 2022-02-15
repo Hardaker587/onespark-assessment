@@ -1,7 +1,7 @@
-$multiplier: 1;
+$multiplier: 0;
 $base-spacing: 2;
 $maximum-iterations: 12;
-$current-iteration: 1;
+$current-iteration: 0;
 
 @while $current-iteration <= $maximum-iterations {
   .p-#{$multiplier} {
@@ -9,6 +9,38 @@ $current-iteration: 1;
   }
   .m-#{$multiplier} {
     margin: #{$base-spacing * $multiplier}px !important;
+  }
+  .px-#{$multiplier} {
+    padding: 0
+      #{$base-spacing *
+      $multiplier}px
+      0
+      #{$base-spacing *
+      $multiplier}px !important;
+  }
+  .mx-#{$multiplier} {
+    margin: 0
+      #{$base-spacing *
+      $multiplier}px
+      0
+      #{$base-spacing *
+      $multiplier}px !important;
+  }
+  .py-#{$multiplier} {
+    padding: #{$base-spacing *
+      $multiplier}px
+      0
+      #{$base-spacing *
+      $multiplier}px
+      0 !important;
+  }
+  .my-#{$multiplier} {
+    margin: #{$base-spacing *
+      $multiplier}px
+      0
+      #{$base-spacing *
+      $multiplier}px
+      0 !important;
   }
   .pl-#{$multiplier} {
     padding-left: #{$base-spacing * $multiplier}px !important;

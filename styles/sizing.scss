@@ -39,15 +39,21 @@
     height: 33.333333333%;
   }
   &-screen {
-    height: 100vw;
+    height: 100vh;
+  }
+  &-screen-90 {
+    height: 90vh;
+  }
+  &-screen-80 {
+    height: 80vh;
   }
   &-half-screen {
-    height: 50vw;
+    height: 50vh;
   }
   &-quarter-screen {
-    height: 25vw;
+    height: 25vh;
   }
   &-third-screen {
-    height: 33.333333333vw;
+    height: 33.333333333vh;
   }
 }

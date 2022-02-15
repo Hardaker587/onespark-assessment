@@ -1,4 +1,4 @@
-$colors: (white, black, green, blue, red, yellow, pink, purple, sky, lime);
+$colors: (white, black, green, blue, red, yellow, pink, purple, sky, lime, lightgrey, grey);
 .text {
   @each $color in $colors {
     &-#{$color} {
