@@ -1,0 +1,29 @@
+.rounded {
+  &-circle {
+    border-radius: 50%;
+  }
+  &-pill {
+    border-radius: 20%;
+  }
+  &-xl {
+    border-radius: 25px;
+  }
+  &-lg {
+    border-radius: 20px;
+  }
+  &-md {
+    border-radius: 15px;
+  }
+  &-sm {
+    border-radius: 10px;
+  }
+  &-xs {
+    border-radius: 5px;
+  }
+}
+
+.border {
+  &-none {
+    border: none;
+  }
+}

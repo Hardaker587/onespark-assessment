@@ -1,0 +1,59 @@
+.w {
+  &-full {
+    width: 100%;
+  }
+  &-half {
+    width: 50%;
+  }
+  &-quarter {
+    width: 25%;
+  }
+  &-third {
+    width: 33.333333333%;
+  }
+  &-screen {
+    width: 100vw;
+  }
+  &-half-screen {
+    width: 50vw;
+  }
+  &-quarter-screen {
+    width: 25vw;
+  }
+  &-third-screen {
+    width: 33.333333333vw;
+  }
+}
+
+.h {
+  &-full {
+    height: 100%;
+  }
+  &-half {
+    height: 50%;
+  }
+  &-quarter {
+    height: 25%;
+  }
+  &-third {
+    height: 33.333333333%;
+  }
+  &-screen {
+    height: 100vh;
+  }
+  &-screen-90 {
+    height: 90vh;
+  }
+  &-screen-80 {
+    height: 80vh;
+  }
+  &-half-screen {
+    height: 50vh;
+  }
+  &-quarter-screen {
+    height: 25vh;
+  }
+  &-third-screen {
+    height: 33.333333333vh;
+  }
+}

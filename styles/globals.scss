@@ -1,0 +1,33 @@
+@import "flex_grid";
+@import "color";
+@import "typography";
+@import "sizing";
+@import "spacing";
+@import "borders";
+@import "inputs";
+@import "buttons";
+// overrides
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url("/rollercoaster.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
