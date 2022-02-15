@@ -1,0 +1,15 @@
+$colors: (white, black, green, blue, red, yellow, pink, purple, sky, lime);
+.text {
+  @each $color in $colors {
+    &-#{$color} {
+      color: #{$color};
+    }
+  }
+}
+.bg {
+  @each $color in $colors {
+    &-#{$color} {
+      background-color: #{$color};
+    }
+  }
+}

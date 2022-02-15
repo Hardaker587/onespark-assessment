@@ -1,0 +1,97 @@
+@mixin std-padding {
+  padding: 1rem !important;
+}
+@mixin dense-padding {
+  padding: 0.5rem !important;
+}
+@mixin no-padding {
+  padding: 0 !important;
+}
+@mixin std-gutter {
+  margin: 1rem !important;
+}
+@mixin dense-gutter {
+  margin: 0.5rem !important;
+}
+@mixin no-gutter {
+  margin: 0 !important;
+}
+
+@mixin std {
+  @include std-gutter;
+  @include std-padding;
+}
+@mixin dense {
+  @include dense-gutter;
+  @include dense-padding;
+}
+@mixin no-spacing {
+  @include no-gutter;
+  @include no-padding;
+}
+
+@mixin centered {
+  justify-content: center;
+  align-items: center;
+}
+
+$column-count: 1;
+$base-division: 12;
+
+@function get-col-percent($column-count) {
+  @return $column-count / $base-division * 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include std;
+  &-reverse {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    @include std;
+  }
+  .no-wrap {
+    flex-wrap: nowrap !important;
+  }
+  .dense {
+    padding: 0.2rem !important;
+    @include dense;
+  }
+  @while $column-count <= 12 {
+    .col-#{$column-count} {
+      flex-basis: get-col-percent($column-count);
+      width: get-col-percent($column-count);
+      padding: 0.5rem;
+      .dense {
+        padding: 0.2rem !important;
+      }
+    }
+    // Increment the counter
+    $column-count: $column-count + 1;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include std;
+  &-reverse {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    @include std;
+  }
+  .no-wrap {
+    flex-wrap: nowrap !important;
+  }
+  .dense {
+    padding: 0.2rem !important;
+    @include dense;
+  }
+}

@@ -1,0 +1,35 @@
+$font-size: (24px, 22px, 20px, 18px, 16px, 14px);
+
+@for $i from 1 to 6 {
+  h#{$i} {
+    font-size: nth($font-size, $i);
+  }
+}
+
+p {
+  font-size: 12px;
+}
+
+$weights: (
+  100,
+  200,
+  300,
+  400,
+  500,
+  600,
+  700,
+  800,
+  900,
+  normal,
+  bold,
+  lighter,
+  bolder,
+  black
+);
+.font {
+  @each $weight in $weights {
+    &-#{$weight} {
+      font-weight: #{$weight};
+    }
+  }
+}
