@@ -6,7 +6,7 @@ export class StorageService {
   public getStorage(name: string) {
     if (typeof window !== "undefined") {
       const data: string | null = localStorage.getItem(name);
-      return JSON.parse(data ? data : "");
+      return JSON.parse(data ? data : '[]');
     }
   }
   public removeStorage(name: string) {
