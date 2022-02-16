@@ -6,6 +6,7 @@ export class StorageService {
   public getStorage(name: string) {
     if (typeof window !== "undefined") {
       const data: string | null = localStorage.getItem(name);
+      console.log({data})
       return JSON.parse(data ?? "");
     }
   }
