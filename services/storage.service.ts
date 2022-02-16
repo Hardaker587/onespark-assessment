@@ -4,8 +4,10 @@ export class StorageService {
     localStorage.setItem(name, data);
   }
   public getStorage(name: string) {
-    const data: string | null = localStorage.getItem(name);
-    return JSON.parse(data ?? "");
+    if (typeof window !== "undefined") {
+      const data: string | null = localStorage.getItem(name);
+      return JSON.parse(data ?? "");
+    }
   }
   public removeStorage(name: string) {
     localStorage.removeItem(name);

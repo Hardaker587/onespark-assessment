@@ -1,9 +1,14 @@
 import { FormEvent, useState } from "react";
+import { AuthenticationService } from "../../services/authentication.service";
+import { useRouter } from "next/router";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const auth = new AuthenticationService();
+  const router = useRouter();
 
   function updateEmail(event: FormEvent) {
     const eventValue = event.target as HTMLTextAreaElement;
@@ -27,13 +32,14 @@ export default function LoginForm() {
     if (defaults.email === "" && defaults.password === "") {
       setError("Please enter email and password");
       timeout(5000, () => setError(""));
-      return
+      return;
     }
     if (defaults.email !== email && defaults.password !== password) {
       setError("Incorrect email and password");
       timeout(5000, () => setError(""));
-      return
+      return;
     }
+    auth.login(email, password, router.push("/policy"));
   }
   return (
     <>
