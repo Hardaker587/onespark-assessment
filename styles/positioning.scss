@@ -1,0 +1,19 @@
+$positions: (relative, fixed, absolute, sticky);
+
+  @each $position in $positions {
+    .#{$position} {
+      position: #{$position};
+    }
+  }
+
+$locations: (top, bottom, left, right);
+
+@each $location in $locations {
+  .#{$location} {
+    @for $i from 1 to 50 {
+      &-#{$i} {
+        #{$location}: #{$i}px;
+      }
+    }
+  }
+}

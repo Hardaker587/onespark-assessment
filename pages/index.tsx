@@ -4,7 +4,7 @@ import BaseCard from "../components/base/base.card";
 
 const Home: NextPage = () => {
   return (
-    <BaseCard props={{ center: true }}>
+    <BaseCard props={{ center: true, size: "h-screen-90" }}>
       <div className="row justify-center align-center">
         <div className="col-6">
           <img

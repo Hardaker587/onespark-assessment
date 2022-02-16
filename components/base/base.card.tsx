@@ -3,6 +3,8 @@ import React from "react";
 interface cardPropsInterface {
   color?: string;
   center?: boolean;
+  size?: string;
+  shadow?: boolean;
 }
 
 type cardConstructorInterface = {
@@ -21,10 +23,15 @@ export default function BaseCard({
   function centerItems() {
     return props?.center && "column justify-center items-center";
   }
+  function elevateCard() {
+    return props?.shadow && "elevation";
+  }
   return (
     <>
       <div
-        className={`p-4 ${returnColorOrDefault()} rounded-xl m-6 h-screen-90 ${centerItems()}`}
+        className={`p-4 ${returnColorOrDefault()} rounded-xl m-6 ${
+          props?.size
+        } ${centerItems()} ${elevateCard()}`}
       >
         {children}
       </div>

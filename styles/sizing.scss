@@ -23,6 +23,12 @@
   &-third-screen {
     width: 33.333333333vw;
   }
+
+  @for $i from 1 to 24 {
+    &-#{$i} {
+      width: calc(5px * #{$i});
+    }
+  }
 }
 
 .h {
@@ -55,5 +61,11 @@
   }
   &-third-screen {
     height: 33.333333333vh;
+  }
+
+  @for $i from 1 to 24 {
+    &-#{$i} {
+      height: calc(5px * #{$i});
+    }
   }
 }
