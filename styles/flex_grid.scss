@@ -58,6 +58,9 @@ $base-division: 12;
   }
   &.no-wrap {
     flex-wrap: nowrap !important;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap !important;
+    }
   }
   &.dense {
     @include dense;
@@ -77,6 +80,10 @@ $base-division: 12;
       padding: 0.5rem;
       .dense {
         padding: 0.2rem !important;
+      }
+      @media screen and (max-width: 768px) {
+        flex-basis: 100%;
+        width: 100%;
       }
     }
     // Increment the counter

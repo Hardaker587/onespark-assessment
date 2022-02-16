@@ -14,12 +14,12 @@ const Success: NextPage = () => {
               alt="Successful"
               className={"w-half mb-4"}
             />
-            <h2>Success!</h2>
-            <p className={"text-grey"}>
+            <h2 className="mb-4">Success!</h2>
+            <p className={"text-grey text-align-center"}>
               You have successfully added a new beneficiary!
             </p>
             <button
-              className={"bg-blue p-4 text-white rounded-sm"}
+              className={"bg-blue p-4 text-white rounded-sm mt-4"}
               type="submit"
               onClick={() => router.push("/policy")}
             >

@@ -9,11 +9,15 @@ const EditBeneficiary: NextPage = () => {
   return (
     <>
       <BaseCard props={{ size: "h-screen-90", center: true }}>
-        <div className="row">
-          <div className="col-6">
-            <img className={"w-full"} src="/life-policy.png" alt="" />
+        <div className="row no-gutters no-padding">
+          <div className="col-6 dense">
+            <img
+              className={"w-full d-mobile-none"}
+              src="/life-policy.png"
+              alt=""
+            />
           </div>
-          <div className="col-6">
+          <div className="col-6 dense">
             <PolicyBeneficiaryForm edit={true} />
           </div>
         </div>

@@ -29,9 +29,9 @@ export default function BaseCard({
   return (
     <>
       <div
-        className={`p-4 ${returnColorOrDefault()} rounded-xl m-6 ${
+        className={`p-4 ${returnColorOrDefault()} rounded-xl m-4 ${
           props?.size
-        } ${centerItems()} ${elevateCard()}`}
+        } ${centerItems()} ${elevateCard()} overflow-y-auto`}
       >
         {children}
       </div>

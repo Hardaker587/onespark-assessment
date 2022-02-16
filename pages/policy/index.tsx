@@ -22,7 +22,7 @@ const Policy: NextPage = () => {
       <BaseCard props={{ size: "h-screen-90", center: true }}>
         <div className="row centered no-wrap">
           <div className="col-6 dense">
-            <img className={"w-full"} src="/beneficiaries.png" alt="" />
+            <img className={"w-full d-mobile-none"} src="/beneficiaries.png" alt="" />
           </div>
           <div className="col-6 dense align-center justify-center">
             {beneficiaries.length <= 0 && (

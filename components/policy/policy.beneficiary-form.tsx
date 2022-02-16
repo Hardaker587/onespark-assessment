@@ -119,8 +119,8 @@ export default function PolicyBeneficiaryForm(
 
   return (
     <>
-      <div className="row">
-        <div className="col-12">
+      <div className="row dense">
+        <div className="col-12 dense">
           <h1 className={"m-6"}>
             <button
               className={"bg-blue p-4 text-white rounded-sm"}

@@ -1,0 +1,14 @@
+$displays: (flex, block, none, inline, inline-block);
+
+.d {
+  @each $display in $displays {
+    &-#{$display} {
+      display: #{$display};
+    }
+    &-mobile-#{$display} {
+        @media screen and (max-width: 768px) {
+            display: #{$display} !important;
+        }
+    }
+  }
+}

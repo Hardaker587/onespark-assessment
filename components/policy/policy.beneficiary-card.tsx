@@ -32,7 +32,7 @@ export default function PolicyBeneficiaryCard(
     <>
       <BaseCard props={{ shadow: true, center: true, color: "bg-sky" }}>
         <div className="row justify-center align-center dense relative">
-          <div className="col-3">
+          <div className="col-3 justify-center align-center">
             <img src={returnImage()} alt={props?.relationship} width={50} />
             <div className="flex justify-center">
               <PencilIcon className={"w-6 h-6"} onClick={() => handleEdit()} />
