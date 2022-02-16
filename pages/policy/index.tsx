@@ -49,7 +49,7 @@ const Policy: NextPage = () => {
             )}
             {beneficiaries.length > 0 && (
               <>
-                <div className="row no-gutters no-padding w-full">
+                <div className="row no-gutters no-padding w-full overflow-y-auto h-screen-80 overflow-x-hidden">
                   <div className="col-12">
                     <h1>Your beneficiaries</h1>
                   </div>
